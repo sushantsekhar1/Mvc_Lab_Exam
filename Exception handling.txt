@@ -1,0 +1,23 @@
+using System;
+
+class ExceptionDemo
+{
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int result = 100 / num;
+            Console.WriteLine("Result: " + result);
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Cannot divide by zero!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+using System;
+using System.IO;
+
+class FileHandlingDemo
+{
+    static void Main()
+    {
+        string path = "employees.txt";
+
+        // Writing data to file
+        using (StreamWriter writer = new StreamWriter(path))
+        {
+            writer.WriteLine("101, John, 50000");
+            writer.WriteLine("102, Alice, 60000");
+            writer.WriteLine("103, Bob, 45000");
+        }
+
+        Console.WriteLine("Employee data written to file.\n");
+
+        // Reading data from file
+        Console.WriteLine("Reading data from file:");
+        using (StreamReader reader = new StreamReader(path))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                Console.WriteLine(line);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+using System;
+
+class Counter
+{
+    public static int Count = 0;
+
+    public Counter()
+    {
+        Count++;
+    }
+}
+
+class StaticDemo
+{
+    static void Main()
+    {
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        Console.WriteLine("Object count: " + Counter.Count);
+    }
+}

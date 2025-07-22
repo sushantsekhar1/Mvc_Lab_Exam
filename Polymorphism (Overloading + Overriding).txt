@@ -1,0 +1,37 @@
+using System;
+
+class MathOperations
+{
+    // Overloading
+    public int Add(int a, int b) => a + b;
+    public double Add(double a, double b) => a + b;
+}
+
+class Parent
+{
+    public virtual void Show()
+    {
+        Console.WriteLine("Parent class");
+    }
+}
+
+class Child : Parent
+{
+    public override void Show()
+    {
+        Console.WriteLine("Child class");
+    }
+}
+
+class PolymorphismDemo
+{
+    static void Main()
+    {
+        MathOperations mo = new MathOperations();
+        Console.WriteLine(mo.Add(2, 3));
+        Console.WriteLine(mo.Add(2.5, 3.7));
+
+        Parent obj = new Child();
+        obj.Show();
+    }
+}

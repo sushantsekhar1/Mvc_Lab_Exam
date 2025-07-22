@@ -1,0 +1,56 @@
+using System;
+
+// Base Class
+class Person
+{
+    public string Name;
+    public int Age;
+
+    public void InputPerson()
+    {
+        Console.Write("Enter Name: ");
+        Name = Console.ReadLine();
+        Console.Write("Enter Age: ");
+        Age = int.Parse(Console.ReadLine());
+    }
+
+    public void DisplayPerson()
+    {
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Age: {Age}");
+    }
+}
+
+// Derived Class
+class Employee : Person
+{
+    public int EmpID;
+    public double Salary;
+
+    public void InputEmployee()
+    {
+        InputPerson();  // calling base class method
+        Console.Write("Enter Employee ID: ");
+        EmpID = int.Parse(Console.ReadLine());
+        Console.Write("Enter Salary: ");
+        Salary = double.Parse(Console.ReadLine());
+    }
+
+    public void DisplayEmployee()
+    {
+        DisplayPerson(); // calling base class method
+        Console.WriteLine($"Employee ID: {EmpID}");
+        Console.WriteLine($"Salary: {Salary}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Employee emp = new Employee();
+        emp.InputEmployee();
+        Console.WriteLine("\n--- Employee Details ---");
+        emp.DisplayEmployee();
+    }
+}

@@ -1,0 +1,22 @@
+using System;
+
+class Person
+{
+    private string name;
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+}
+
+class EncapsulationDemo
+{
+    static void Main()
+    {
+        Person p = new Person();
+        p.Name = "Immortal";
+        Console.WriteLine("Name: " + p.Name);
+    }
+}

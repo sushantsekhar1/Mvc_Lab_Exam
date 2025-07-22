@@ -1,0 +1,45 @@
+using System;
+
+namespace ArrayExamples
+{
+    class SingleDimensionalArray
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[8] { 10, 200, 130, 40, 50, 23, 63, 25 };
+
+            Console.WriteLine("Original Array Elements:");
+            foreach (int num in numbers)
+            {
+                Console.Write(num + " ");
+            }
+
+            // Sorting the array in ascending order
+            Array.Sort(numbers);
+            Console.WriteLine("\n\nSorted Array (Ascending):");
+            foreach (int num in numbers)
+            {
+                Console.Write(num + " ");
+            }
+
+            // Reversing the array for descending order
+            Array.Reverse(numbers);
+            Console.WriteLine("\n\nReversed Array (Descending):");
+            foreach (int num in numbers)
+            {
+                Console.Write(num + " ");
+            }
+
+            // Searching for an element (e.g., 130)
+            int index = Array.IndexOf(numbers, 130);
+            if (index != -1)
+            {
+                Console.WriteLine($"\n\nElement 130 found at index: {index}");
+            }
+            else
+            {
+                Console.WriteLine("\n\nElement 130 not found in the array.");
+            }
+        }
+    }
+}

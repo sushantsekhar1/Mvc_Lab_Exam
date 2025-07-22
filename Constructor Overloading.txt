@@ -1,0 +1,36 @@
+using System;
+
+class Student
+{
+    public string Name;
+    public int Age;
+
+    public Student()
+    {
+        Name = "Unknown";
+        Age = 0;
+    }
+
+    public Student(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+class ConstructorDemo
+{
+    static void Main()
+    {
+        Student s1 = new Student();
+        Student s2 = new Student("Immortal", 22);
+
+        s1.Display();
+        s2.Display();
+    }
+}

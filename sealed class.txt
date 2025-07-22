@@ -1,0 +1,32 @@
+using System;
+
+namespace OOPConcepts
+{
+    // Sealed class
+    sealed class Payment
+    {
+        public void Pay()
+        {
+            Console.WriteLine("Payment processed successfully.");
+        }
+    }
+
+    // This will cause a compile-time error if you try to inherit
+    /*
+    class OnlinePayment : Payment
+    {
+        // Error: cannot derive from sealed type 'Payment'
+    }
+    */
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Payment p = new Payment();
+            p.Pay();
+
+            Console.WriteLine("\nNote: You cannot inherit from a sealed class.");
+        }
+    }
+}
