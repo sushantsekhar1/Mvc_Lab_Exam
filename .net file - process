@@ -13,6 +13,7 @@ Https://GitHub.com/aj1304/codes
 
 Asp .net web
 
+in models folder create
 Product 
 first install this --------->  Install-Package EntityFramework
 Product context
