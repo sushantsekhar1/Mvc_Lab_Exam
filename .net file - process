@@ -8,6 +8,7 @@ Https://GitHub.com/aj1304/codes
 Asp .net web
 
 Product 
+first install this --------->  Install-Package EntityFramework
 Product context
 
 Tools ....nugget package manager .....package manager console ....then type package entity framework
