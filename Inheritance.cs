@@ -234,3 +234,70 @@ class Program
 }
 
 
+
+
+using System;
+namespace TestDemo
+{
+    class Person
+    {
+        string Name;
+        int Age;
+
+        public Person(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+
+        public void displayPerson()
+        {
+            Console.WriteLine("Name : " + Name);
+            Console.WriteLine("Age : " + Age);
+        }
+    }
+
+    class Employee : Person
+    {
+        int EmpId;
+        double Salary;
+
+        public Employee(string name, int age, int empId, double salary) : base(name, age)
+        {
+            EmpId = empId;
+            Salary = salary;
+        }
+
+        public void dispayEmployee()
+        {
+            displayPerson();
+            Console.WriteLine("Employee Id : " + EmpId);
+            Console.WriteLine("Employee Salary : " + Salary);
+        }
+    }
+    public class InheritanceDemo
+    {
+        public static void Main()
+        {
+            Console.Write("Enter the Name : ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter the age : ");
+            int age = int.Parse(Console.ReadLine());
+
+
+            Console.Write("Enter the EmployeeId : ");
+            int empId = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter the Salary of Employee : ");
+            double sal = double.Parse(Console.ReadLine());
+
+
+            Employee emp = new Employee(name, age, empId, sal);
+            emp.dispayEmployee();
+        }
+    }
+}
+
+
+
